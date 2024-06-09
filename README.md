@@ -1,4 +1,4 @@
-## What this is
+## What is this
 A simple framework based on C# abstract class and interface.
 ## What does this do
 To reduce usage, only those in viewport are instantiated and show data dynamically.
