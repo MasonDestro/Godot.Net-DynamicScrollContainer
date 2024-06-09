@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxt7u1vu461fo"]
+
+[ext_resource type="Script" path="res://Scripts/Other/Test.cs" id="1_xb8h8"]
+[ext_resource type="Script" path="res://Scripts/Other/FramesPerSecond.cs" id="2_sqqny"]
+[ext_resource type="Script" path="res://Scripts/LabelContainer.cs" id="3_ujxar"]
+[ext_resource type="PackedScene" uid="uid://l5i43qhrc7bq" path="res://Prefabs/LabelItem.tscn" id="4_awl85"]
+
+[node name="Showcase" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer" node_paths=PackedStringArray("nlc")]
+offset_right = 152.0
+offset_bottom = 32.0
+script = ExtResource("1_xb8h8")
+nlc = NodePath("../../CanvasLayer2/Panel/ScrollContainer")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 48.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "00.00"
+horizontal_alignment = 2
+script = ExtResource("2_sqqny")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -244.0
+offset_right = 200.0
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer2/Panel" node_paths=PackedStringArray("container")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_ujxar")
+container = NodePath("VBoxContainer")
+itemPrefab = ExtResource("4_awl85")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
