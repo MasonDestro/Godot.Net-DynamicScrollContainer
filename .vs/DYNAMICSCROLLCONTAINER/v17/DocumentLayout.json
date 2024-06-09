@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Godot Projects\\DynamicScrollContainer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|e:\\godot projects\\dynamicscrollcontainer\\scripts\\framwork\\base\\dynamicscrollcontainerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|solutionrelative:scripts\\framwork\\base\\dynamicscrollcontainerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|e:\\godot projects\\dynamicscrollcontainer\\scripts\\framwork\\base\\dynamiccontaineritembase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|solutionrelative:scripts\\framwork\\base\\dynamiccontaineritembase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|e:\\godot projects\\dynamicscrollcontainer\\scripts\\framwork\\interface\\idynamiccontaineritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|solutionrelative:scripts\\framwork\\interface\\idynamiccontaineritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|e:\\godot projects\\dynamicscrollcontainer\\scripts\\framwork\\interface\\idynamicscrollcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|solutionrelative:scripts\\framwork\\interface\\idynamicscrollcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IDynamicScrollContainer.cs",
+              "DocumentMoniker": "E:\\Godot Projects\\DynamicScrollContainer\\Scripts\\Framwork\\Interface\\IDynamicScrollContainer.cs",
+              "RelativeDocumentMoniker": "Scripts\\Framwork\\Interface\\IDynamicScrollContainer.cs",
+              "ToolTip": "E:\\Godot Projects\\DynamicScrollContainer\\Scripts\\Framwork\\Interface\\IDynamicScrollContainer.cs",
+              "RelativeToolTip": "Scripts\\Framwork\\Interface\\IDynamicScrollContainer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T03:13:46.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IDynamicContainerItem.cs",
+              "DocumentMoniker": "E:\\Godot Projects\\DynamicScrollContainer\\Scripts\\Framwork\\Interface\\IDynamicContainerItem.cs",
+              "RelativeDocumentMoniker": "Scripts\\Framwork\\Interface\\IDynamicContainerItem.cs",
+              "ToolTip": "E:\\Godot Projects\\DynamicScrollContainer\\Scripts\\Framwork\\Interface\\IDynamicContainerItem.cs",
+              "RelativeToolTip": "Scripts\\Framwork\\Interface\\IDynamicContainerItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T03:16:20.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DynamicScrollContainerBase.cs",
+              "DocumentMoniker": "E:\\Godot Projects\\DynamicScrollContainer\\Scripts\\Framwork\\Base\\DynamicScrollContainerBase.cs",
+              "RelativeDocumentMoniker": "Scripts\\Framwork\\Base\\DynamicScrollContainerBase.cs",
+              "ToolTip": "E:\\Godot Projects\\DynamicScrollContainer\\Scripts\\Framwork\\Base\\DynamicScrollContainerBase.cs",
+              "RelativeToolTip": "Scripts\\Framwork\\Base\\DynamicScrollContainerBase.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAwC4AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T03:15:36.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DynamicContainerItemBase.cs",
+              "DocumentMoniker": "E:\\Godot Projects\\DynamicScrollContainer\\Scripts\\Framwork\\Base\\DynamicContainerItemBase.cs",
+              "RelativeDocumentMoniker": "Scripts\\Framwork\\Base\\DynamicContainerItemBase.cs",
+              "ToolTip": "E:\\Godot Projects\\DynamicScrollContainer\\Scripts\\Framwork\\Base\\DynamicContainerItemBase.cs",
+              "RelativeToolTip": "Scripts\\Framwork\\Base\\DynamicContainerItemBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T15:08:43.218Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
