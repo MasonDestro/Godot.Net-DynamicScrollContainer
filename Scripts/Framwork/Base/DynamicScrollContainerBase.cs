@@ -135,8 +135,10 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
                         container.CustomMinimumSize = new Vector2(maxIndex * (itemSize.X + separation.X), 0);
                         break;
                     case ContainerType.grid:
-                        
-
+                        var RowCol = Math.DivRem(maxIndex, firstItemIndex);
+                        int maxRow = RowCol.Quotient + (RowCol.Remainder == 0 ? 0 : 1);
+                        //container.CustomMinimumSize = new Vector2(firstItemIndex * (itemSize.X + separation.X) - separation.X, row * (itemSize.Y + separation.Y));
+                        container.CustomMinimumSize = new Vector2(0, maxRow * (itemSize.Y + separation.Y));
                         break;
                     default:
                         break;
@@ -206,7 +208,8 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
                 placeholder.CustomMinimumSize = new Vector2(itemsShowingRecord.Keys.Min() * (itemSize.X + separation.X), 0);
                 break;
             case ContainerType.grid:
-                
+                var RowCol = Math.DivRem(itemsShowingRecord.Keys.Min(), firstItemIndex);
+                placeholder.CustomMinimumSize = new Vector2(0, RowCol.Quotient * (itemSize.Y + separation.Y));
                 break;
             default:
                 break;
@@ -279,16 +282,13 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
         switch (containerType)
         {
             case ContainerType.vBox:
+            case ContainerType.grid:
                 result = (position.Y + separation.Y + itemSize.Y < ScrollVertical)
                     || (position.Y > ScrollVertical + Size.Y);
                 break;
             case ContainerType.hBox:
                 result = (position.X + separation.X + itemSize.X < ScrollHorizontal)
                     || (position.X > ScrollHorizontal + Size.X);
-                break;
-            case ContainerType.grid:
-
-
                 break;
             default:
                 break;
@@ -321,6 +321,10 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
                 break;
             case ContainerType.grid:
 
+                indexHead = (int)((ScrollVertical) / (itemSize.Y + separation.Y)) * firstItemIndex;
+
+                indexTail = (int)((ScrollVertical + Size.Y) / (itemSize.Y + separation.Y) + 1) * firstItemIndex;
+                indexTail = Mathf.Min(indexTail, maxIndex - 1);
 
                 break;
             default:

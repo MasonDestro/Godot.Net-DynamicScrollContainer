@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "E:\\GitHub Repositories\\Godot.Net-DynamicScrollContainer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|e:\\github repositories\\godot.net-dynamicscrollcontainer\\scripts\\other\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|solutionrelative:scripts\\other\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|e:\\github repositories\\godot.net-dynamicscrollcontainer\\scripts\\framwork\\base\\dynamicscrollcontainerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D37DEC8-2AF8-4A26-B8CD-6FE5EAEAD3A7}|DynamicScrollContainer.csproj|solutionrelative:scripts\\framwork\\base\\dynamicscrollcontainerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,24 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Test.cs",
-              "DocumentMoniker": "E:\\GitHub Repositories\\Godot.Net-DynamicScrollContainer\\Scripts\\Other\\Test.cs",
-              "RelativeDocumentMoniker": "Scripts\\Other\\Test.cs",
-              "ToolTip": "E:\\GitHub Repositories\\Godot.Net-DynamicScrollContainer\\Scripts\\Other\\Test.cs",
-              "RelativeToolTip": "Scripts\\Other\\Test.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAwwAwAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T12:11:21.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "IDynamicScrollContainer.cs",
               "DocumentMoniker": "E:\\GitHub Repositories\\Godot.Net-DynamicScrollContainer\\Scripts\\Framwork\\Interface\\IDynamicScrollContainer.cs",
               "RelativeDocumentMoniker": "Scripts\\Framwork\\Interface\\IDynamicScrollContainer.cs",
@@ -59,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "IDynamicContainerItem.cs",
               "DocumentMoniker": "E:\\GitHub Repositories\\Godot.Net-DynamicScrollContainer\\Scripts\\Framwork\\Interface\\IDynamicContainerItem.cs",
               "RelativeDocumentMoniker": "Scripts\\Framwork\\Interface\\IDynamicContainerItem.cs",
@@ -71,20 +54,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DynamicScrollContainerBase.cs",
               "DocumentMoniker": "E:\\GitHub Repositories\\Godot.Net-DynamicScrollContainer\\Scripts\\Framwork\\Base\\DynamicScrollContainerBase.cs",
               "RelativeDocumentMoniker": "Scripts\\Framwork\\Base\\DynamicScrollContainerBase.cs",
               "ToolTip": "E:\\GitHub Repositories\\Godot.Net-DynamicScrollContainer\\Scripts\\Framwork\\Base\\DynamicScrollContainerBase.cs",
               "RelativeToolTip": "Scripts\\Framwork\\Base\\DynamicScrollContainerBase.cs",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAQwIwAAAAcAAAA",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAIwF0AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-07T03:15:36.961Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DynamicContainerItemBase.cs",
               "DocumentMoniker": "E:\\GitHub Repositories\\Godot.Net-DynamicScrollContainer\\Scripts\\Framwork\\Base\\DynamicContainerItemBase.cs",
               "RelativeDocumentMoniker": "Scripts\\Framwork\\Base\\DynamicContainerItemBase.cs",
