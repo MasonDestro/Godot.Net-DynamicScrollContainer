@@ -1,19 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxt7u1vu461fo"]
+[gd_scene load_steps=7 format=3 uid="uid://bxt7u1vu461fo"]
 
 [ext_resource type="Script" path="res://Scripts/Other/Test.cs" id="1_xb8h8"]
 [ext_resource type="Script" path="res://Scripts/Other/FramesPerSecond.cs" id="2_sqqny"]
 [ext_resource type="Script" path="res://Scripts/LabelContainer.cs" id="3_ujxar"]
-[ext_resource type="PackedScene" uid="uid://l5i43qhrc7bq" path="res://Prefabs/LabelItem.tscn" id="4_awl85"]
+[ext_resource type="PackedScene" uid="uid://l5i43qhrc7bq" path="res://Prefabs/Label VBox Item.tscn" id="4_awl85"]
+[ext_resource type="PackedScene" uid="uid://djal3bc4vfs1e" path="res://Prefabs/Label Grid Item.tscn" id="5_1mmin"]
+[ext_resource type="PackedScene" uid="uid://h27f2cyf5o7g" path="res://Prefabs/Label HBox Item.tscn" id="5_crxrc"]
 
 [node name="Showcase" type="Node"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer" node_paths=PackedStringArray("nlc")]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer" node_paths=PackedStringArray("nlcVBox", "nlcHBox", "nlcGrid")]
 offset_right = 152.0
 offset_bottom = 32.0
 script = ExtResource("1_xb8h8")
-nlc = NodePath("../../CanvasLayer2/Panel/ScrollContainer")
+nlcVBox = NodePath("../../CanvasLayer2/Panel vBox/ScrollContainer")
+nlcHBox = NodePath("../../CanvasLayer2/Panel hBox/ScrollContainer")
+nlcGrid = NodePath("../../CanvasLayer2/Panel grid/ScrollContainer")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchors_preset = 1
@@ -29,21 +33,21 @@ script = ExtResource("2_sqqny")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
-[node name="Panel" type="Panel" parent="CanvasLayer2"]
+[node name="Panel vBox" type="Panel" parent="CanvasLayer2"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -244.0
-offset_right = 200.0
-offset_bottom = 244.0
+offset_left = -464.0
+offset_top = -276.0
+offset_right = -64.0
+offset_bottom = 212.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_group_ = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer2/Panel" node_paths=PackedStringArray("container")]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer2/Panel vBox" node_paths=PackedStringArray("container")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,7 +57,71 @@ grow_vertical = 2
 script = ExtResource("3_ujxar")
 container = NodePath("VBoxContainer")
 itemPrefab = ExtResource("4_awl85")
+isDynamicLoad = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Panel/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Panel vBox/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Panel hBox" type="Panel" parent="CanvasLayer2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = 244.0
+offset_right = 384.0
+offset_bottom = 303.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer2/Panel hBox" node_paths=PackedStringArray("container")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_ujxar")
+container = NodePath("HBoxContainer")
+itemPrefab = ExtResource("5_crxrc")
+isDynamicLoad = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2/Panel hBox/ScrollContainer"]
+layout_mode = 2
+
+[node name="Panel grid" type="Panel" parent="CanvasLayer2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = -276.0
+offset_right = 464.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer2/Panel grid" node_paths=PackedStringArray("container")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_ujxar")
+container = NodePath("GridContainer")
+itemPrefab = ExtResource("5_1mmin")
+isDynamicLoad = true
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer2/Panel grid/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 4

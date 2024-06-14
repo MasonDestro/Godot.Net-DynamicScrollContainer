@@ -1,11 +1,16 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 public partial class Test : LineEdit
 {
     [Export]
-    LabelContainer nlc;
+    LabelContainer nlcVBox;
+    [Export]
+    LabelContainer nlcHBox;
+    [Export]
+    LabelContainer nlcGrid;
 
 	public override void _Ready()
 	{
@@ -17,16 +22,26 @@ public partial class Test : LineEdit
         int amount = 0;
         if (int.TryParse(str, out amount))
         {
-            if (nlc != null)
+            List<string> stringList = new List<string>();
+            for (int i = 0; i < amount; i++)
             {
-                List<string> stringList = new List<string>();
-                for (int i = 0; i < amount; i++)
-                {
-                    stringList.Add((i + 1).ToString());
-                }
-                
-                nlc.UpdateDatas(stringList);
+                stringList.Add((i + 1).ToString());
             }
+
+            if (nlcVBox != null)
+            {
+                nlcVBox.UpdateDatas(stringList);
+            }
+            if (nlcHBox != null)
+            {
+                nlcHBox.UpdateDatas(stringList);
+            }
+            if (nlcGrid != null)
+            {
+                nlcGrid.UpdateDatas(stringList);
+            }
+
+            ReleaseFocus();
         }
     }
 }

@@ -44,7 +44,7 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
     {
         if (container == null || itemPrefab == null)
         {
-            GD.Print($"container is null:{container == null}\nitem is null:{itemPrefab == null}");
+            GD.PrintErr($"container is null:{container == null}\nitem is null:{itemPrefab == null}");
             return;
         }
 
@@ -80,10 +80,10 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
             AddChild(itemPoolNode);
         }
 
-        if (placeholder == null)
+        for (int i = 0; i < firstItemIndex; i++)
         {
             placeholder = new Control();
-            placeholder.Name = "Placeholder";
+            placeholder.Name = "Placeholder_"+ i;
             container.AddChild(placeholder);
         }
     }
@@ -95,6 +95,12 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
 
     public async void RefreshItems(int maxIndex)
     {
+        if (container == null || itemPrefab == null)
+        {
+            GD.PrintErr($"container is null:{container == null}\nitem is null:{itemPrefab == null}");
+            return;
+        }
+
         ClearItems();
 
         this.maxIndex = maxIndex;
@@ -126,11 +132,10 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
                         container.CustomMinimumSize = new Vector2(0, maxIndex * (itemSize.Y + separation.Y));
                         break;
                     case ContainerType.hBox:
-
-
+                        container.CustomMinimumSize = new Vector2(maxIndex * (itemSize.X + separation.X), 0);
                         break;
                     case ContainerType.grid:
-
+                        
 
                         break;
                     default:
@@ -198,10 +203,10 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
                 placeholder.CustomMinimumSize = new Vector2(0, itemsShowingRecord.Keys.Min() * (itemSize.Y + separation.Y));
                 break;
             case ContainerType.hBox:
-
+                placeholder.CustomMinimumSize = new Vector2(itemsShowingRecord.Keys.Min() * (itemSize.X + separation.X), 0);
                 break;
             case ContainerType.grid:
-
+                
                 break;
             default:
                 break;
@@ -262,7 +267,9 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
 
         if (containerType == ContainerType.grid)
         {
-
+            var RowCol = Math.DivRem(index, firstItemIndex);
+            position.Y = RowCol.Quotient * (itemSize.Y + separation.Y);
+            position.X = RowCol.Remainder * (itemSize.X + separation.X) - separation.X;
         }
         else
         {
@@ -276,8 +283,8 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
                     || (position.Y > ScrollVertical + Size.Y);
                 break;
             case ContainerType.hBox:
-
-
+                result = (position.X + separation.X + itemSize.X < ScrollHorizontal)
+                    || (position.X > ScrollHorizontal + Size.X);
                 break;
             case ContainerType.grid:
 
@@ -306,7 +313,10 @@ public abstract partial class DynamicScrollContainerBase : ScrollContainer
 
                 break;
             case ContainerType.hBox:
+                indexHead = (int)((ScrollHorizontal) / (itemSize.X + separation.X));
 
+                indexTail = (int)((ScrollHorizontal + Size.X) / (itemSize.X + separation.X));
+                indexTail = Mathf.Min(indexTail, maxIndex - 1);
 
                 break;
             case ContainerType.grid:
